@@ -1,0 +1,6 @@
+name: Execute cabal-gild
+description: Quickly format the cabal file using cabal-gild
+author: Nikita Volkov
+runs:
+  using: docker
+  image: 
