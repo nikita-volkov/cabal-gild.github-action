@@ -3,4 +3,4 @@ description: Quickly format the cabal file using cabal-gild
 author: Nikita Volkov
 runs:
   using: docker
-  image: docker://ghcr.io/nikita-volkov/cabal-gild.github-action:d4f14196cc132a85c70a5f1ed121bb7c172d807c
+  image: docker://ghcr.io/nikita-volkov/cabal-gild.github-action:f2714a1493c5d438e98d271bde879acc65c7a89f
