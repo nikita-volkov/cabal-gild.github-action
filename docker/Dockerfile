@@ -1,9 +1,9 @@
-FROM haskell:9.14
+FROM debian:stable-slim
 
-RUN cabal update
-RUN cabal install cabal-gild-1.8.4.1 --install-method=copy --installdir=/usr/local/bin
+ARG VERSION=1.8.4.1
 
-RUN rm -rf ~/.cabal
+ADD https://github.com/tfausak/cabal-gild/releases/download/${VERSION}/cabal-gild-${VERSION}-linux-x64.tar.gz /tmp/cabal-gild.tar.gz
+RUN tar xzf /tmp/cabal-gild.tar.gz -C /usr/local/bin && rm /tmp/cabal-gild.tar.gz
 
 COPY entrypoint.bash /usr/local/bin/
 
